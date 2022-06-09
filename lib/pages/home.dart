@@ -19,6 +19,11 @@ class _HomePageState extends State<HomePage> {
         drawer: Drawer(
           child: ListView(
             children: [
+              UserAccountsDrawerHeader(
+                  currentAccountPicture:
+                      Image(image: AssetImage('assets/images/logo.jpg')),
+                  accountName: Text("Octashop"),
+                  accountEmail: Text("Email: Octashop.support@gmail.com")),
               Padding(
                 padding: const EdgeInsets.all(9.0),
                 child: ListTile(

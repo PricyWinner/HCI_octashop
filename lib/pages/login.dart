@@ -107,30 +107,47 @@ class _LoginPageState extends State<LoginPage> {
         appBar: AppBar(
           title: Text("Octashop Login"),
         ),
-        body: Form(
-            child: Padding(
-          padding: const EdgeInsets.all(8.0),
+        body: SingleChildScrollView(
           child: Column(
             children: [
-              TextFormField(
-                controller: usernameController,
-                decoration: InputDecoration(
-                  labelText: 'Enter your Username',
-                  errorText: _submited ? _errorUsername : null,
+              Image(image: AssetImage('assets/images/logo.jpg')),
+              Padding(
+                padding: EdgeInsets.all(10.0),
+                child: Text(
+                  "Login",
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
-                onChanged: (value) => setState(() => _username),
               ),
-              TextFormField(
-                controller: passwordController,
-                decoration: InputDecoration(
-                    labelText: 'Enter your Password',
-                    errorText: _submited ? _errorPassword : null),
-                onChanged: (value) => setState(() => _password),
-              ),
-              ElevatedButton(onPressed: _submit, child: Text('Login'))
+              Form(
+                  child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    TextFormField(
+                      controller: usernameController,
+                      decoration: InputDecoration(
+                        labelText: 'Enter your Username',
+                        errorText: _submited ? _errorUsername : null,
+                      ),
+                      onChanged: (value) => setState(() => _username),
+                    ),
+                    TextFormField(
+                      controller: passwordController,
+                      obscureText: true,
+                      enableSuggestions: false,
+                      autocorrect: false,
+                      decoration: InputDecoration(
+                          labelText: 'Enter your Password',
+                          errorText: _submited ? _errorPassword : null),
+                      onChanged: (value) => setState(() => _password),
+                    ),
+                    ElevatedButton(onPressed: _submit, child: Text('Login'))
+                  ],
+                ),
+              )),
             ],
           ),
-        )),
+        ),
       ),
     );
   }
