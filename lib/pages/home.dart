@@ -50,6 +50,9 @@ class _HomePageState extends State<HomePage> {
                   shape: RoundedRectangleBorder(
                       side: BorderSide(color: Colors.black, width: 1),
                       borderRadius: BorderRadius.circular(5)),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/news');
+                  },
                 ),
               ),
               Padding(
