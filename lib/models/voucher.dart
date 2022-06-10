@@ -11,5 +11,6 @@ class VoucherClass {
 class VoucherGameClass {
   int id;
   String name;
-  VoucherGameClass(this.id, this.name);
+  String image;
+  VoucherGameClass(this.id, this.name, this.image);
 }

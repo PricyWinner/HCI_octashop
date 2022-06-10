@@ -4,11 +4,12 @@ List<VoucherClass> voucherDB = [];
 List<VoucherGameClass> gameDB = [];
 
 void generateDummyVoucher() {
-  gameDB.add(VoucherGameClass(0, "Mobile Legend"));
-  gameDB.add(VoucherGameClass(1, "Free Fire"));
-  gameDB.add(VoucherGameClass(2, "Valorant"));
-  gameDB.add(VoucherGameClass(3, "Ragnarok X"));
-  gameDB.add(VoucherGameClass(4, "Genshin Impact"));
+  gameDB.add(VoucherGameClass(0, "Mobile Legend", "assets/images/logo_ml.jpg"));
+  gameDB.add(VoucherGameClass(1, "Free Fire", "assets/images/logo_ff.jpg"));
+  gameDB.add(VoucherGameClass(2, "Valorant", "assets/images/logo_valo.jpg"));
+  gameDB.add(VoucherGameClass(3, "Ragnarok X", "assets/images/logo_rx.jpg"));
+  gameDB.add(
+      VoucherGameClass(4, "Genshin Impact", "assets/images/logo_genshin.jpg"));
 
   voucherDB.add(VoucherClass(0, "10 Currency", gameDB.elementAt(0), 15000));
   voucherDB.add(VoucherClass(1, "50 Currency", gameDB.elementAt(0), 75000));
@@ -16,7 +17,7 @@ void generateDummyVoucher() {
   voucherDB.add(VoucherClass(3, "10 Currency", gameDB.elementAt(1), 150000));
   voucherDB.add(VoucherClass(4, "50 Currency", gameDB.elementAt(1), 75000));
   voucherDB.add(VoucherClass(5, "100 Currency", gameDB.elementAt(1), 150000));
-  voucherDB.add(VoucherClass(6, "10 Currency", gameDB.elementAt(2), 150000));
+  voucherDB.add(VoucherClass(6, "15 Currency", gameDB.elementAt(2), 150000));
   voucherDB.add(VoucherClass(7, "50 Currency", gameDB.elementAt(2), 75000));
   voucherDB.add(VoucherClass(8, "100 Currency", gameDB.elementAt(2), 150000));
   voucherDB.add(VoucherClass(9, "10 Currency", gameDB.elementAt(3), 150000));

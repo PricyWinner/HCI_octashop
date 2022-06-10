@@ -8,18 +8,48 @@ class VoucherPage extends StatefulWidget {
 }
 
 class _VoucherPageState extends State<VoucherPage> {
+  List<VoucherClass> vouchers = [];
+
   Widget getVoucherWidgets(int gameid) {
     List<VoucherClass> vouchers = voucherDB;
     Widget toBeReturned = Column();
     for (var voucher in vouchers) {
       if (voucher.game.id == gameid) {
-        (toBeReturned as Column).children.add(VoucherCard(
-              voucherData: voucher,
-            ));
+        // (toBeReturned as Column).children.add(VoucherCard(
+        //       voucherData: voucher,
+        //     ));
         print(voucher.game.name);
       }
     }
     return toBeReturned;
+  }
+
+  String getVoucher(int gameid) {
+    List<VoucherClass> vouchers = voucherDB;
+    // Widget toBeReturned = Column();
+    // for (var voucher in vouchers) {
+    //   // if (voucher.game.id == gameid) {
+    //     // (toBeReturned as Column).children.add(VoucherCard(
+    //     //       voucherData: voucher,
+    //     //     ));
+    //     print(voucher.game.name);
+    //     log(voucher.game.name);
+    //     return voucher.game.name;
+    //   // }
+    // }
+    return vouchers.elementAt(4).game.name;
+  }
+
+  List<VoucherClass> selectedGameVoucher(int gameid) {
+    List<VoucherClass> vouchers = voucherDB;
+    List<VoucherClass> selectedVoucher = [];
+    for (var voucher in vouchers) {
+      if (voucher.game.id == gameid) {
+        selectedVoucher.add(voucher);
+        print(voucher.name);
+      }
+    }
+    return selectedVoucher;
   }
 
   @override
@@ -35,16 +65,16 @@ class _VoucherPageState extends State<VoucherPage> {
                   text: "ML",
                 ),
                 Tab(
-                  text: 'VL',
-                ),
-                Tab(
                   text: 'FF',
                 ),
                 Tab(
-                  text: 'GI',
+                  text: 'VL',
                 ),
                 Tab(
                   text: 'RX',
+                ),
+                Tab(
+                  text: 'GI',
                 ),
               ],
             ),
@@ -52,14 +82,11 @@ class _VoucherPageState extends State<VoucherPage> {
           ),
           body: TabBarView(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: getVoucherWidgets(0),
-              ),
-              Icon(Icons.directions_bike),
-              Icon(Icons.directions_bike),
-              Icon(Icons.directions_transit),
-              Icon(Icons.directions_bike),
+              VoucherList(gameid: 0),
+              VoucherList(gameid: 1),
+              VoucherList(gameid: 2),
+              VoucherList(gameid: 3),
+              VoucherList(gameid: 4),
             ],
           ),
         ),

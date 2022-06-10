@@ -47,6 +47,11 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/images/logo_ff.jpg
+    - assets/images/logo_genshin.jpg
+    - assets/images/logo_rx.jpg
+    - assets/images/logo_valo.jpg
+    - assets/images/logo_ml.jpg
     - assets/images/logo.jpg
     - assets/images/news1.jpg
     - assets/images/news2.jpg
