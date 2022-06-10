@@ -15,12 +15,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     generateDummyVoucher();
+    generateDummyNews();
     return MaterialApp(initialRoute: '/login', routes: {
       '/': (context) => HomePage(),
       '/login': (context) => LoginPage(),
       '/news': (context) => NewsPage(),
       '/voucher': (context) => VoucherPage(),
-      '/voucherDetail': (context) => VoucherDetailPage(selectedVoucher: selectedVoucher),
+      '/voucherDetail': (context) =>
+          VoucherDetailPage(selectedVoucher: selectedVoucher),
     });
   }
 }

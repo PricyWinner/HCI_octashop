@@ -2,8 +2,20 @@ part of 'services.dart';
 
 List<NewsClass> newsDB = [];
 
-void generateDummyNews(){
-  newsDB.add(NewsClass(0, 'https://i.imgur.com/o4mo0PV.jpeg','Game potentially heading to PS5 and Xbox Series X|S' , 'New Platform'));
-  newsDB.add(NewsClass(1, 'https://i.imgur.com/IJRTw6M.jpeg','new changes to jett, fade, and chamber' , 'New Patch'));
-  newsDB.add(NewsClass(2, 'https://i.imgur.com/hbRQChv.jpeg','kode redeem FF Free Fire' , 'Free Fire'));
+void generateDummyNews() {
+  newsDB.add(NewsClass(
+      0,
+      'https://i.pinimg.com/564x/30/4e/ba/304ebaa7114b0e34536e8510f760d22a.jpg',
+      'Game potentially heading to PS5 and Xbox Series X|S',
+      'New Platform'));
+  newsDB.add(NewsClass(
+      1,
+      'https://i.pinimg.com/564x/30/4e/ba/304ebaa7114b0e34536e8510f760d22a.jpg',
+      'new changes to jett, fade, and chamber',
+      'New Patch'));
+  newsDB.add(NewsClass(
+      2,
+      'https://i.pinimg.com/564x/30/4e/ba/304ebaa7114b0e34536e8510f760d22a.jpg',
+      'kode redeem FF Free Fire',
+      'Free Fire'));
 }
