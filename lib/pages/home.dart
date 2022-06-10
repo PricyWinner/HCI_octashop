@@ -21,6 +21,7 @@ class _HomePageState extends State<HomePage> {
                 // Text(${_LoginPageState._username}),
                 Image(image: AssetImage('assets/images/logo.jpg'), height: 100),
                 // SizedBox(height: 10),
+                Text('Hello,' + currentUser!.username),
                 HomeCarousel(),
                 // SizedBox(height: 30),
                 Text('Octashop',
