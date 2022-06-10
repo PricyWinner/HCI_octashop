@@ -20,6 +20,7 @@ class _VoucherDetailPageState extends State<VoucherDetailPage> {
         padding: const EdgeInsets.all(16.0),
         child: Text(widget.selectedVoucher.name),
       ),
+      
     );
   }
 }

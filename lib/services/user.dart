@@ -6,6 +6,7 @@ void generateDummyUser() {
   userDB.add(UserClass('alex', '123456'));
 }
 
+
 bool userLogin(username, password) {
   bool success = false;
   for (var user in userDB) {

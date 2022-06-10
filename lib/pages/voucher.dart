@@ -80,6 +80,7 @@ class _VoucherPageState extends State<VoucherPage> {
             ),
             title: const Text('Tabs Demo'),
           ),
+          drawer: DrawerComponent(),
           body: TabBarView(
             children: [
               VoucherList(gameid: 0),

@@ -89,61 +89,62 @@ class _NewsPageState extends State<NewsPage> {
         appBar: AppBar(
           title: Text('News and Promotion'),
         ),
-        drawer: Drawer(
-          child: ListView(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(9.0),
-                child: ListTile(
-                  title: Text('Home'),
-                  trailing: Icon(Icons.home),
-                  shape: RoundedRectangleBorder(
-                      side: BorderSide(color: Colors.black, width: 1),
-                      borderRadius: BorderRadius.circular(5)),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(9.0),
-                child: ListTile(
-                  title: Text('Voucher'),
-                  trailing: Icon(Icons.confirmation_num),
-                  shape: RoundedRectangleBorder(
-                      side: BorderSide(color: Colors.black, width: 1),
-                      borderRadius: BorderRadius.circular(5)),
-                  onTap: () {
-                    Navigator.pushNamed(context, '/voucher');
-                  },
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(9.0),
-                child: ListTile(
-                  title: Text('News'),
-                  trailing: Icon(Icons.feed),
-                  shape: RoundedRectangleBorder(
-                      side: BorderSide(color: Colors.black, width: 1),
-                      borderRadius: BorderRadius.circular(5)),
-                  onTap: () {
-                    Navigator.pushNamed(context, '/news');
-                  },
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(9.0),
-                child: ListTile(
-                  title: Text('Log Out'),
-                  trailing: Icon(Icons.logout),
-                  shape: RoundedRectangleBorder(
-                      side: BorderSide(color: Colors.black, width: 1),
-                      borderRadius: BorderRadius.circular(5)),
-                  onTap: () {
-                    Navigator.pushNamed(context, '/login');
-                  },
-                ),
-              )
-            ],
-          ),
-        ),
+        // drawer: Drawer(
+        //   child: ListView(
+        //     children: [
+        //       Padding(
+        //         padding: const EdgeInsets.all(9.0),
+        //         child: ListTile(
+        //           title: Text('Home'),
+        //           trailing: Icon(Icons.home),
+        //           shape: RoundedRectangleBorder(
+        //               side: BorderSide(color: Colors.black, width: 1),
+        //               borderRadius: BorderRadius.circular(5)),
+        //         ),
+        //       ),
+        //       Padding(
+        //         padding: const EdgeInsets.all(9.0),
+        //         child: ListTile(
+        //           title: Text('Voucher'),
+        //           trailing: Icon(Icons.confirmation_num),
+        //           shape: RoundedRectangleBorder(
+        //               side: BorderSide(color: Colors.black, width: 1),
+        //               borderRadius: BorderRadius.circular(5)),
+        //           onTap: () {
+        //             Navigator.pushNamed(context, '/voucher');
+        //           },
+        //         ),
+        //       ),
+        //       Padding(
+        //         padding: const EdgeInsets.all(9.0),
+        //         child: ListTile(
+        //           title: Text('News'),
+        //           trailing: Icon(Icons.feed),
+        //           shape: RoundedRectangleBorder(
+        //               side: BorderSide(color: Colors.black, width: 1),
+        //               borderRadius: BorderRadius.circular(5)),
+        //           onTap: () {
+        //             Navigator.pushNamed(context, '/news');
+        //           },
+        //         ),
+        //       ),
+        //       Padding(
+        //         padding: const EdgeInsets.all(9.0),
+        //         child: ListTile(
+        //           title: Text('Log Out'),
+        //           trailing: Icon(Icons.logout),
+        //           shape: RoundedRectangleBorder(
+        //               side: BorderSide(color: Colors.black, width: 1),
+        //               borderRadius: BorderRadius.circular(5)),
+        //           onTap: () {
+        //             Navigator.pushNamed(context, '/login');
+        //           },
+        //         ),
+        //       )
+        //     ],
+        //   ),
+        // ),
+        drawer: DrawerComponent(),
         body: CarouselSlider(
           options: CarouselOptions(
             height: 450,

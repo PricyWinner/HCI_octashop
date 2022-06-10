@@ -9,3 +9,4 @@ import 'package:octashop/services/services.dart';
 part 'carousel.dart';
 part 'homeCarousel.dart';
 part 'voucherList.dart';
+part 'drawer.dart';
