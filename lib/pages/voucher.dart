@@ -62,21 +62,22 @@ class _VoucherPageState extends State<VoucherPage> {
             bottom: const TabBar(
               tabs: [
                 Tab(
-                  text: "ML",
+                  text: "Mobile Legend",
                 ),
                 Tab(
-                  text: 'FF',
+                  text: 'Free fire',
                 ),
                 Tab(
-                  text: 'VL',
+                  text: 'Valorant',
                 ),
                 Tab(
-                  text: 'RX',
+                  text: 'Ragnarok X',
                 ),
                 Tab(
-                  text: 'GI',
+                  text: 'Genshin Impact',
                 ),
               ],
+              isScrollable: true,
             ),
             title: const Text('Tabs Demo'),
           ),
