@@ -16,10 +16,6 @@ class _VoucherDetailPageState extends State<VoucherDetailPage> {
       appBar: AppBar(
         title: Text(widget.selectedVoucher.game.name),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Text(widget.selectedVoucher.name),
-      ),
     );
   }
 }
