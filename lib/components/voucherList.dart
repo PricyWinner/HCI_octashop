@@ -43,11 +43,26 @@ class _VoucherListState extends State<VoucherList> {
                 "Order",
                 style: TextStyle(color: Colors.blue, fontSize: 15),
               ),
-              title: Text("Rp." +
-                  selectedGameVoucher(widget.gameid)
-                      .elementAt(index)
-                      .price
-                      .toString()),
+              title: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 4.0, 0, 1.0),
+                    child: Text(
+                      selectedGameVoucher(widget.gameid)
+                          .elementAt(index)
+                          .name
+                          .toString(),
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                  Text("Rp." +
+                      selectedGameVoucher(widget.gameid)
+                          .elementAt(index)
+                          .price
+                          .toString())
+                ],
+                crossAxisAlignment: CrossAxisAlignment.start,
+              ),
               subtitle: Text(selectedGameVoucher(widget.gameid)
                   .elementAt(index)
                   .game

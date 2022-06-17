@@ -52,7 +52,7 @@ class _LoginPageState extends State<LoginPage> {
     if (text.isEmpty) {
       return 'Can\'t be empty';
     }
-    if (text.length < 4) {
+    if (text.length < 7) {
       return 'Too short';
     }
 
