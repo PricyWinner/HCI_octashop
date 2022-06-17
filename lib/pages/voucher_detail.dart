@@ -68,7 +68,7 @@ class _VoucherDetailPageState extends State<VoucherDetailPage> {
     }
 
     // ignore: unnecessary_null_comparison
-    if (double.tryParse(playerID) == null) {
+    if (double.tryParse(playerID) == null && playerID.isNotEmpty) {
       print("not number");
       showAlert(context, 'Player ID is not numeric');
       success = false;

@@ -20,10 +20,19 @@ class _HomePageState extends State<HomePage> {
               children: [
                 // Text(${_LoginPageState._username}),
                 Image(image: AssetImage('assets/images/logo.jpg'), height: 100),
-                // SizedBox(height: 10),
-                Text('Hello,' + currentUser!.username),
+                SizedBox(height: 10),
+                Padding(
+                  padding: EdgeInsets.only(left: 15, right: 15),
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text('Hello, ' + currentUser!.username,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 35.0)),
+                  ),
+                ),
+                SizedBox(height: 30),
                 HomeCarousel(),
-                // SizedBox(height: 30),
+                SizedBox(height: 30),
                 Text('Octashop',
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0)),
