@@ -18,10 +18,10 @@ void generateDummyVoucher() {
   voucherDB.add(VoucherClass(4, "50 Diamond", gameDB.elementAt(1), 9000));
   voucherDB.add(VoucherClass(5, "100 Diamond", gameDB.elementAt(1), 20000));
 
-  voucherDB.add(VoucherClass(6, "15 VP", gameDB.elementAt(2), 150000));
+  voucherDB.add(VoucherClass(6, "15 VP", gameDB.elementAt(2), 15000));
   voucherDB.add(VoucherClass(7, "50 VP", gameDB.elementAt(2), 75000));
   voucherDB.add(VoucherClass(8, "100 VP", gameDB.elementAt(2), 150000));
-  
+
   voucherDB.add(VoucherClass(9, "2600 Diamond", gameDB.elementAt(3), 80000));
   voucherDB.add(VoucherClass(10, "5400 Diamond", gameDB.elementAt(3), 160000));
   voucherDB.add(VoucherClass(11, "11000 Diamond", gameDB.elementAt(3), 330000));
