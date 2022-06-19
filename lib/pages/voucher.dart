@@ -79,7 +79,7 @@ class _VoucherPageState extends State<VoucherPage> {
               ],
               isScrollable: true,
             ),
-            title: const Text('Tabs Demo'),
+            title: const Text('Voucher'),
           ),
           drawer: DrawerComponent(),
           body: TabBarView(

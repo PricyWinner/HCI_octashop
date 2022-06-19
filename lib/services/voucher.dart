@@ -29,6 +29,9 @@ void generateDummyVoucher() {
   voucherDB.add(VoucherClass(12, "60 Crystals", gameDB.elementAt(4), 20000));
   voucherDB.add(VoucherClass(13, "300 Crystals", gameDB.elementAt(4), 75000));
   voucherDB.add(VoucherClass(14, "1000 Crystals", gameDB.elementAt(4), 250000));
+
+
+  
 }
 
 List<VoucherGameClass> listGames() {
